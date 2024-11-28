@@ -12,6 +12,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { IconPackage } from "@tabler/icons-react";
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -29,6 +30,7 @@ export default function AppNavbar() {
           className="sm:hidden"
         />
         <NavbarBrand>
+          <IconPackage />
           <p className="font-bold text-inherit">NextJs Starter</p>
         </NavbarBrand>
       </NavbarContent>
