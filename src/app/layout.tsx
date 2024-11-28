@@ -16,7 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // Not having suppressHydrationWarning on the <html> will create warnings because next-themes updates that element.
+    // This property only applies one level deep, so it won't block hydration warnings on other elements.
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
