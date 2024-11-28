@@ -1,10 +1,12 @@
-import { Button } from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello World</h1>
-      <Button>Button</Button>
-    </>
+    <Card className="mx-auto mt-4 max-w-md">
+      <CardBody className="text-center">
+        <h1 className="text-5xl">Next.js Starter</h1>
+        <p className="text-xl">Simple starter template</p>
+      </CardBody>
+    </Card>
   );
 }

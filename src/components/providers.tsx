@@ -9,9 +9,12 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error this occurs because of the typed routes
-    <NextUIProvider navigate={router.push}>
+    <NextUIProvider
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error this occurs because of the typed routes
+      navigate={router.push}
+      className="flex h-full w-full flex-col"
+    >
       <NextThemesProvider attribute="class">{children}</NextThemesProvider>
     </NextUIProvider>
   );
