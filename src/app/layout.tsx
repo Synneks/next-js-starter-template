@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import AppNavbar from "@/components/app-navbar";
-import Providers from "@/components/providers";
+import Providers from "@/components/app-navbar/providers";
 
 import "./globals.css";
 
