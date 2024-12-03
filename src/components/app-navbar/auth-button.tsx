@@ -14,7 +14,7 @@ export default function AuthButton({ minimal = true }: { minimal?: boolean }) {
   const { data, status } = useSession();
 
   if (status === "loading") {
-    return <CircularProgress />;
+    return <CircularProgress aria-label="Loading" />;
   }
 
   if (status === "authenticated") {
@@ -37,6 +37,7 @@ export default function AuthButton({ minimal = true }: { minimal?: boolean }) {
             }}
             className="transition-transform"
             name={data.user?.name}
+            aria-label={data.user?.name || "User menu"}
           />
         </DropdownTrigger>
         <DropdownMenu aria-label="User Actions" variant="flat">
