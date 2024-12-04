@@ -26,6 +26,7 @@ export default function AppNavbar() {
 
   if (status === "authenticated") {
     menuItems.push({ label: "Profile", href: "/profile" });
+    menuItems.push({ label: "GuestBook", href: "/guestbook" });
   }
 
   return (
